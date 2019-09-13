@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+.App-intro{
+  /* background-color: red; */
+  
+  display: flex;
+  background-color: lightgrey;
+}
