@@ -1,6 +1,9 @@
 {
   "name": "my_react-dnd",
   "version": "0.1.0",
+  "engines": {
+    "node": "10.3.0"
+  },
   "private": true,
   "dependencies": {
     "immutability-helper": "^2.7.0",
