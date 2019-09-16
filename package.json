@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "fetch": "^1.1.0",
     "immutability-helper": "^2.7.0",
     "lodash.flow": "^3.5.0",
     "react": "^16.4.0",

@@ -10,7 +10,7 @@ const update = require('immutability-helper');
 
 class App extends Component {
 
-  constructor(){
+  constructor() {
     super()
     this.state = {
       cards: []
@@ -21,9 +21,10 @@ class App extends Component {
 
 
   componentDidMount(){
-    axios.get('http://www.splashbase.co/api/v1/images/search?query=laptop')
+    axios.get('http://www.splashbase.co/api/v1/images/search?query=cars')
     .then((resp)=>this.setState({cards: resp.data.images})) 
   }
+
 
   moveCard = (dragIndex, hoverIndex) => {
     const { cards } = this.state
@@ -44,16 +45,15 @@ class App extends Component {
       <div className="App">
         <div className="App-intro">
 
-            {this.state.cards.map((card, i) => (
-              <Card
-                key={card.id}
-                index={i}
-                id={card.id}
-                url = {card.url}
-                // text={i}
-                moveCard={this.moveCard}
-              />
-            ))}
+          {this.state.cards.map((card, i) => (
+            <Card
+              key={card.id}
+              index={i}
+              id={card.id}
+              url={card.url}
+              moveCard={this.moveCard}
+            />
+          ))}
 
         </div>
       </div>
