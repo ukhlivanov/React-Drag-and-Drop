@@ -17,9 +17,6 @@ class App extends Component {
     }
   }
 
-
-
-
   componentDidMount(){
     axios.get('http://www.splashbase.co/api/v1/images/search?query=cars')
     .then((resp)=>this.setState({cards: resp.data.images})) 
