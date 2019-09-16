@@ -7,15 +7,6 @@ import {
 } from 'react-dnd';
 import flow from 'lodash/flow';
 
-const style = {
-  fontSize: '50px',
-  width: '30%',
-  height: '100px',
-  border: '1px dashed gray',
-  margin: '20px',
-  backgroundColor: 'white',
-  cursor: 'move',
-};
 
 const cardSource = {
   beginDrag(props) {
@@ -64,6 +55,7 @@ class Card extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     const {
       text,
       isDragging,
@@ -76,7 +68,20 @@ class Card extends React.Component {
       connectDragSource &&
       connectDropTarget &&
       connectDragSource(
-        connectDropTarget(<div style={{ ...style, opacity }}>{text}</div>),
+        connectDropTarget(<div style={{ ...{
+          fontSize: '50px',
+          width: '30%',
+          height: '100px',
+          border: '1px dashed gray',
+          margin: '20px',
+          width: '50px',
+          height: '50px',
+          backgroundImage: `url(${this.props.url})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          cursor: 'move',
+        }, opacity }}>{text}</div>),
       )
     );
   }
